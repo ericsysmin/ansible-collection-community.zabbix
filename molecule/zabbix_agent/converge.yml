@@ -14,9 +14,8 @@
         name: gnupg
         update_cache: true
       when: ansible_os_family|lower == "debian"
-    - name: Install gpg for apt_key
+    - name: Install python-netaddr for apt_key
       pip: name=netaddr
-      when: ansible_os_family|lower == "debian"
     - name: create containerd folder
       file:
         path: /etc/systemd/system/containerd.service.d
