@@ -20,14 +20,4 @@
         dest: /etc/systemd/system/containerd.service.d/override.conf
       when: ansible_service_mgr == "systemd"
   roles:
-    - role: community.zabbix.zabbix-agent
-      zabbix-agent_files:
-        - name: rails
-          path: "/var/log/service_logs"
-          options:
-            - weekly
-            - size 25M
-            - missingok
-            - compress
-            - delaycompress
-            - copytruncate
+    - role: community.zabbix.zabbix_agent

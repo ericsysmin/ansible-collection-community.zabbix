@@ -1,15 +1,17 @@
-name: "community.zabbix.zabbix-agent"
+name: "community.zabbix.zabbix_agent"
 on:
   push:
     paths:
-      - 'roles/zabbix-agent/**'
-      - '.github/workflows/zabbix-agent.yml'
+      - 'roles/zabbix_agent/**'
+      - 'molecule/zabbix_agent/**'
+      - '.github/workflows/zabbix_agent.yml'
   pull_request:
     paths:
-      - 'roles/zabbix-agent/**'
-      - '.github/workflows/zabbix-agent.yml'
+      - 'roles/zabbix_agent/**'
+      - 'molecule/zabbix_agent/**'
+      - '.github/workflows/zabbix_agent.yml'
 jobs:
-  zabbix-agent:
+  zabbix_agent:
     runs-on: ubuntu-18.04
     env:
       PY_COLORS: 1
@@ -33,7 +35,7 @@ jobs:
           - distro: debian:9
             command: /lib/systemd/systemd
         collection_role:
-          - zabbix-agent
+          - zabbix_agent
         zabbix_version:
           # - 3.2
           # - 3.4
