@@ -35,10 +35,10 @@ jobs:
         collection_role:
           - zabbix-agent
         zabbix_version:
-          - 3.2
-          - 3.4
-          - 4.0
-          - 4.2
+          # - 3.2
+          # - 3.4
+          # - 4.0
+          # - 4.2
           - 4.4
     steps:
       - name: Check out code
@@ -53,6 +53,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          echo $PWD
           sudo apt install docker
           python -m pip install --upgrade pip
           pip install molecule yamllint ansible-lint docker
