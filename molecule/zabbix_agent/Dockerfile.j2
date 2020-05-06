@@ -35,8 +35,7 @@ RUN yum makecache --timer \
 {% if item.image in ["ubuntu:16.04"] %}
 RUN apt-get update \
     && apt-get install -y --no-install-recommends python-setuptools wget \
-    && wget https://bootstrap.pypa.io/get-pip.py \
-    && python get-pip.py
+      python sudo bash ca-certificates python-pip
 {% elif item.image in ["debian:9"] %}
 RUN apt-get update \
     && apt-get install -y --no-install-recommends libffi-dev libssl-dev \
