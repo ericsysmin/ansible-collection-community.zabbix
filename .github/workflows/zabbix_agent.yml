@@ -26,8 +26,8 @@ jobs:
             command: /usr/sbin/init
           # - fedora:29
           # - fedora:28
-          - distro: ubuntu:16.04
-            command: /sbin/init
+          # - distro: ubuntu:16.04
+          #   command: /sbin/init
           - distro: ubuntu:18.04
             command: /lib/systemd/systemd
           - distro: ubuntu:20.04
