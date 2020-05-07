@@ -39,10 +39,10 @@ jobs:
         collection_role:
           - zabbix_agent
         zabbix_version:
-          # - 3.2
-          # - 3.4
-          # - 4.0
-          - "4.2"
+          # - "3.2"
+          # - "3.4"
+          # - "4.0"
+          # - "4.2"
           - "4.4"
     steps:
       - name: Check out code
