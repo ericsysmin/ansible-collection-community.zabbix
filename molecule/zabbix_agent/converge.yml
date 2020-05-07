@@ -9,8 +9,8 @@
       until: task_result is success
       retries: 10
       delay: 2
-    - name: Install python-netaddr for apt_key
-      pip: name=netaddr
+    - name: Install python-netaddr
+      package: name=pyhton-netaddr
     - name: create containerd folder
       file:
         path: /etc/systemd/system/containerd.service.d
