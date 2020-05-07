@@ -12,13 +12,13 @@ ENV container=docker
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
      locales software-properties-common rsyslog systemd systemd-cron sudo \
-     iproute2
+     iproute2 gnupg
 RUN sed -i 's/^\($ModLoad imklog\)/#\1/' /etc/rsyslog.conf
 {% elif item.image.split(':', 1)[0] in ["debian"] %}
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
        sudo systemd systemd-sysv \
-       build-essential wget
+       build-essential wget gnupg
 {% elif item.image.split(':', 1)[0] in ["centos"] %}
 {% if item.image in ["centos:7"] %}
 RUN yum makecache fast && yum -y install deltarpm \

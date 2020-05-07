@@ -9,11 +9,6 @@
       until: task_result is success
       retries: 10
       delay: 2
-    - name: Install gpg for apt_key
-      apt:
-        name: gnupg
-        update_cache: true
-      when: ansible_os_family|lower == "debian"
     - name: Install python-netaddr for apt_key
       pip: name=netaddr
     - name: create containerd folder
