@@ -23,3 +23,4 @@
       when: ansible_service_mgr == "systemd"
   roles:
     - role: community.zabbix.zabbix_agent
+      zabbix_agent_src_reinstall: false
