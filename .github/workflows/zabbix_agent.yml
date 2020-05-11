@@ -1,12 +1,15 @@
 name: "community.zabbix.zabbix_agent"
 on:
   push:
-    paths: &role_paths
+    paths:
       - 'roles/zabbix_agent/**'
       - 'molecule/zabbix_agent/**'
       - '.github/workflows/zabbix_agent.yml'
   pull_request:
-    paths: *role_paths
+    paths:
+      - 'roles/zabbix_agent/**'
+      - 'molecule/zabbix_agent/**'
+      - '.github/workflows/zabbix_agent.yml'
 jobs:
   zabbix_agent:
     runs-on: ubuntu-18.04
