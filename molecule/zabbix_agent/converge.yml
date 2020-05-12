@@ -11,6 +11,9 @@
       delay: 2
     - name: Install python-netaddr
       pip: name=netaddr
+    - name: Install gnupg
+      apt: name=gnupg
+      when: ansible_os_family == "Debian"
     - name: create containerd folder
       file:
         path: /etc/systemd/system/containerd.service.d
