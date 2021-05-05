@@ -94,6 +94,12 @@ zabbix_web_upload_max_filesize: 2M
 zabbix_web_max_input_time: 300
 zabbix_web_max_input_vars: 10000
 
+zabbix_web_saml: false
+zabbix_web_saml_spkey: 'conf/certs/sp.key'
+zabbix_web_saml_spcert: 'conf/certs/sp.crt'
+zabbix_web_saml_idpcert: 'conf/certs/idp.crt'
+zabbix_web_saml_settings: []
+
 # Database
 zabbix_server_database: pgsql
 zabbix_server_database_long: postgresql
@@ -106,6 +112,17 @@ zabbix_server_dbuser: zabbix-server
 zabbix_server_dbpassword: zabbix-server
 zabbix_server_dbport: 5432
 zabbix_server_dbschema:
+
+zabbix_server_dbencryption: 'false'
+zabbix_server_dbkey_file: ''
+zabbix_server_dbcert_file: ''
+zabbix_server_dbca_file: ''
+zabbix_server_dbverify_host: 'false'
+zabbix_server_dbcipher_list: ''
+
+zabbix_server_vault_url: ''
+zabbix_server_vault_db_path: ''
+zabbix_server_vault_token: ''
 
 # Elasticsearch
 # zabbix_server_history_url:
