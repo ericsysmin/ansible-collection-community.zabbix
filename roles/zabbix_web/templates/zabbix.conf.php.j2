@@ -17,18 +17,18 @@ $DB['PASSWORD'] = '{{ zabbix_server_dbpassword }}';
 $DB['SCHEMA'] = '{{ zabbix_server_dbschema }}';
 
 // Used for TLS connection.
-$DB['ENCRYPTION']		= '{{ zabbix_server_dbencryption }}';
-$DB['KEY_FILE']			= '{{ zabbix_server_dbkey_file }}';
-$DB['CERT_FILE']		= '{{ zabbix_server_dbcert_file }}';
-$DB['CA_FILE']			= '{{ zabbix_server_dbca_file }}';
-$DB['VERIFY_HOST']		= '{{ zabbix_server_dbverify_host }}';
-$DB['CIPHER_LIST']		= '{{ zabbix_server_dbcipher_list }}';
+$DB['ENCRYPTION']   = '{{ zabbix_server_dbencryption }}';
+$DB['KEY_FILE']     = '{{ zabbix_server_dbkey_file }}';
+$DB['CERT_FILE']    = '{{ zabbix_server_dbcert_file }}';
+$DB['CA_FILE']      = '{{ zabbix_server_dbca_file }}';
+$DB['VERIFY_HOST']  = '{{ zabbix_server_dbverify_host }}';
+$DB['CIPHER_LIST']  = '{{ zabbix_server_dbcipher_list }}';
 
 
 // Vault configuration. Used if database credentials are stored in Vault secrets manager.
-$DB['VAULT_URL']		= '{{ zabbix_server_vault_url }}';
-$DB['VAULT_DB_PATH']	= '{{ zabbix_server_vault_db_path }}';
-$DB['VAULT_TOKEN']		= '{{ zabbix_server_vault_token }}';
+$DB['VAULT_URL']      = '{{ zabbix_server_vault_url }}';
+$DB['VAULT_DB_PATH']  = '{{ zabbix_server_vault_db_path }}';
+$DB['VAULT_TOKEN']    = '{{ zabbix_server_vault_token }}';
 
 {% if zabbix_web_doubleprecision is defined and zabbix_web_doubleprecision %}
 // Use IEEE754 compatible value range for 64-bit Numeric (float) history values.
@@ -51,10 +51,10 @@ $HISTORY['types']	= {{ zabbix_server_history_types | to_json }};
 {% if zabbix_web_saml is defined and zabbix_web_saml %}
 // Used for SAML authentication.
 // Uncomment to override the default paths to SP private key, SP and IdP X.509 certificates, and to set extra settings.
-//$SSO['SP_KEY']			= {{ zabbix_web_saml_spkey }}';
-//$SSO['SP_CERT']			= {{ zabbix_web_saml_spcert }}';
-//$SSO['IDP_CERT']		= {{ zabbix_web_saml_idpcert }}';
-//$SSO['SETTINGS']		= {{ zabbix_web_saml_settings }}';
+//$SSO['SP_KEY']      = {{ zabbix_web_saml_spkey }}';
+//$SSO['SP_CERT']     = {{ zabbix_web_saml_spcert }}';
+//$SSO['IDP_CERT']    = {{ zabbix_web_saml_idpcert }}';
+//$SSO['SETTINGS']    = {{ zabbix_web_saml_settings }}';
 {% endif %}
 
 {% if zabbix_web_env is defined %}
