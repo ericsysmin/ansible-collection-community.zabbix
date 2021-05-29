@@ -156,6 +156,7 @@ The following is an overview of all available configuration default for this rol
 * `zabbix_agent_apt_priority`: Add a weight (`Pin-Priority`) for the APT repository.
 * `zabbix_agent_conf_mode`: Default: `0644`. The "mode" for the Zabbix configuration file.
 * `zabbix_agent_dont_detect_ip`: Default `false`. When set to `true`, it won't detect available ip addresses on the host and no need for the Python module `netaddr` to be installed.
+* `zabbix_agent_allow_key`: list of AllowKey configurations.
 
 ### Zabbix Agent vs Zabbix Agent 2 configuration
 
@@ -173,7 +174,7 @@ Otherwise it just for the Zabbix Agent or for the Zabbix Agent 2.
 * `zabbix_agent_logremotecommands`: enable logging of executed shell commands as warnings.
 * `zabbix_agent(2)_listenport`: agent will listen on this port for connections from the server.
 * `zabbix_agent2_statusport`: Agent will listen on this port for HTTP status requests.
-* `zabbix_agent_listenip`: list of comma delimited ip addresses that the agent should listen on.
+* `zabbix_agent(2)_listenip`: list of comma delimited ip addresses that the agent should listen on.
 * `zabbix_agent_startagents`: number of pre-forked instances of zabbix_agentd that process passive checks.
 * `zabbix_agent(2)_hostname`: unique, case sensitive hostname.
 * `zabbix_agent(2)_hostnameitem`: item used for generating hostname if it is undefined.
